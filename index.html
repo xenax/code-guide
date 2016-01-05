@@ -4,41 +4,40 @@ layout: default
 
 
 <div class="heading" id="toc">
-  <h2>Table of contents</h2>
+  <h2>Змест</h2>
 </div>
 <div class="section toc">
   <div class="col">
     <h4><a href="#html">HTML</a></h4>
     <ul>
-      <li><a href="#html-syntax">Syntax</a></li>
+      <li><a href="#html-syntax">Сінтаксіс</a></li>
       <li><a href="#html-doctype">HTML5 doctype</a></li>
-      <li><a href="#html-lang">Language attribute</a></li>
-      <li><a href="#html-encoding">Character encoding</a></li>
-      <li><a href="#html-ie-compatibility-mode">Internet Explorer compatibility mode</a></li>
-      <li><a href="#html-style-script">CSS and JavaScript includes</a></li>
-      <li><a href="#html-practicality">Practicality over purity</a></li>
-      <li><a href="#html-attribute-order">Attribute order</a></li>
-      <li><a href="#html-boolean-attributes">Boolean attributes</a></li>
-      <li><a href="#html-reducing-markup">Reducing markup</a></li>
-      <li><a href="#html-javascript">JavaScript generated markup</a></li>
+      <li><a href="#html-lang">Атрыбут мовы</a></li>
+      <li><a href="#html-ie-compatibility-mode">Рэжым сумяшчальнасці Internet Explorer</a></li>
+      <li><a href="#html-encoding">Кадоўка сімвалаў</a></li>
+      <li><a href="#html-style-script">Падключэнне CSS і JavaScript</a></li>
+      <li><a href="#html-practicality">Практычнасць важней чысціні</a></li>
+      <li><a href="#html-attribute-order">Парадак атрыбутаў</a></li>
+      <li><a href="#html-boolean-attributes">Лагічныя атрыбуты</a></li>
+      <li><a href="#html-reducing-markup">Скарачэнне разметкі</a></li>
+      <li><a href="#html-javascript">Разметка, генераваная з дапамогай JavaScript</a></li>
     </ul>
   </div>
   <div class="col">
     <h4><a href="#css">CSS</a></h4>
     <ul>
-      <li><a href="#css-syntax">CSS syntax</a></li>
-      <li><a href="#css-declaration-order">Declaration order</a></li>
-      <li><a href="#css-import">Don't use @import</a></li>
-      <li><a href="#css-media-queries">Media query placement</a></li>
-      <li><a href="#css-prefixed-properties">Prefixed properties</a></li>
-      <li><a href="#css-single-declarations">Rules with single declarations</a></li>
-      <li><a href="#css-shorthand">Shorthand notation</a></li>
-      <li><a href="#css-nesting">Nesting in Less and Sass</a></li>
-      <li><a href="#css-operators">Operators in Less and Sass</a></li>
-      <li><a href="#css-comments">Comments</a></li>
-      <li><a href="#css-classes">Classes</a></li>
-      <li><a href="#css-selectors">Selectors</a></li>
-      <li><a href="#css-organization">Organization</a></li>
+      <li><a href="#css-syntax">CSS сінтаксіс</a></li>
+      <li><a href="#css-declaration-order">Парадак аб'явы</a></li>
+      <li><a href="#css-import">Не выкарыстоўвайце @import</a></li>
+      <li><a href="#css-media-queries">Месца для media query</a></li>
+      <li><a href="#css-prefixed-properties">Ўласцівасці з прэфіксамі</a></li>
+      <li><a href="#css-single-declarations">Правілы з адзінкавымі аб'явамі</a></li>
+      <li><a href="#css-shorthand">Скарочаны запіс</a></li>
+      <li><a href="#css-nesting">Укладзенасць ў Less і Sass</a></li>
+      <li><a href="#css-comments">Каментарыі</a></li>
+      <li><a href="#css-classes">Імёны класаў</a></li>
+      <li><a href="#css-selectors">Селектары</a></li>
+      <li><a href="#css-organization">Арганізацыя кода</a></li>
     </ul>
   </div>
 </div>
@@ -46,12 +45,12 @@ layout: default
 
 <div class="section" id="golden-rule">
   <div class="col">
-    <h2>Golden rule</h2>
-    <p>Enforce these, or your own, agreed upon guidelines at all times. Small or large, call out what's incorrect. For additions or contributions to this Code Guide, please <a href="https://github.com/mdo/code-guide/issues/new">open an issue on GitHub</a>.</p>
+    <h2>Залатое правіла</h2>
+    <p>Строга выконвайце прапанаваныя тут або сваі ўласныя пагаднення. Калі вы знайшлі памылку, будзь яна вялікая ці маленькая, адразу паведаміце пра гэта. Калі ў вас ёсць што дапоўніць ці вы хочаце прыняць удзел у распрацоўцы гэтых пагадненняў, калі ласка,<a href="https://github.com/mdo/code-guide/issues/new">стварыце issue на GitHub</a>.</p>
   </div>
   <div class="col">
     <blockquote>
-      <p>Every line of code should appear to be written by a single person, no matter the number of contributors.</p>
+      <p>Кожны радок кода павінны здавацца напісаным толькі адным чалавекам, па-за залежнасці ад колькасці распрацоўшчыкаў.</p>
     </blockquote>
   </div>
 </div>
@@ -64,13 +63,13 @@ layout: default
 
 <div class="section" id="html-syntax">
   <div class="col">
-    <h3>Syntax</h3>
+    <h3>Синтаксис</h3>
     <ul>
-      <li>Use soft tabs with two spaces—they're the only way to guarantee code renders the same in any environment.</li>
-      <li>Nested elements should be indented once (two spaces).</li>
-      <li>Always use double quotes, never single quotes, on attributes.</li>
-      <li>Don't include a trailing slash in self-closing elements—the <a href="http://dev.w3.org/html5/spec-author-view/syntax.html#syntax-start-tag">HTML5 spec</a> says they're optional.</li>
-      <li>Don’t omit optional closing tags (e.g. <code>&lt;/li&gt;</code> or <code>&lt;/body&gt;</code>).</li>
+      <li>Выкарыстоўвайце мяккія водступы з двума прабеламі &mdash; гэта адзіны спосаб гарантаваць, што ваш код будзе ўсюды аднолькава выглядаць.</li>
+      <li>Укладзеныя элементы павінны мець водступ (два прабелу).</li>
+      <li>У атрыбутах заўсёды выкарыстоўвайце падвойныя двукоссі, але не адзінарныя.</li>
+      <li>Ня дадаевайце слеш ("/") у канец адзіночнага тэга &mdash;<a href="http://dev.w3.org/html5/spec-author-view/syntax.html#syntax-start-tag">Спецыфікацыя HTML5 </a> кажа, што гэта не абавязкова.</li>
+      <li>Не прапускайце неабавязковыя якія зачыняюць тэгі (напрыклад, <code>&lt;/li&gt;</code> або <code>&lt;/body&gt;</code>).</li>
     </ul>
   </div>
   <div class="col">
@@ -81,7 +80,7 @@ layout: default
 <div class="section" id="html-doctype">
   <div class="col">
     <h3>HTML5 doctype</h3>
-    <p>Enforce standards mode and more consistent rendering in every browser possible with this simple doctype at the beginning of every HTML page.</p>
+    <p>Укажите в начале каждой вашей HTML-страницы этот тип документа. Это заставит браузер работать в режиме соответствия стандартам, что обеспечит единообразное отображение ваших страниц в разных браузерах.</p>
   </div>
   <div class="col">
     {% highlight html %}{% include html/doctype.html %}{% endhighlight %}
@@ -90,13 +89,13 @@ layout: default
 
 <div class="section" id="html-lang">
   <div class="col">
-    <h3>Language attribute</h3>
-    <p>From the HTML5 spec:</p>
+    <h3>Атрибут языка</h3>
+    <p>Из спецификации HTML5:</p>
     <blockquote>
-      <p>Authors are encouraged to specify a lang attribute on the root html element, giving the document's language. This aids speech synthesis tools to determine what pronunciations to use, translation tools to determine what rules to use, and so forth.</p>
+      <p>Для указания языка документа авторам рекомендуется прописывать атрибут языка в корневом элементе html. Это поможет инструментам синтеза речи определить какое произношение использовать, а инструментам перевода - какие правила, и так далее.</p>
     </blockquote>
-    <p>Read more about the <code>lang</code> attribute <a href="http://www.w3.org/html/wg/drafts/html/master/semantics.html#the-html-element">in the spec</a>.</p>
-    <p>Head to Sitepoint for a <a href="http://reference.sitepoint.com/html/lang-codes">list of language codes</a>.</p>
+    <p>Подробнее познакомиться с атрибутом <code>lang</code> можно в <a href="http://www.w3.org/html/wg/drafts/html/master/semantics.html#the-html-element">спецификации</a>.</p>
+    <p><a href="http://reference.sitepoint.com/html/lang-codes">Список кодов различных языков</a> на Sitepoint.</p>
   </div>
   <div class="col">
     {% highlight html %}{% include html/lang.html %}{% endhighlight %}
@@ -105,9 +104,9 @@ layout: default
 
 <div class="section" id="html-ie-compatibility-mode">
   <div class="col">
-    <h3>IE compatibility mode</h3>
-    <p>Internet Explorer supports the use of a document compatibility <code>&lt;meta&gt;</code> tag to specify what version of IE the page should be rendered as. Unless circumstances require otherwise, it's most useful to instruct IE to use the latest supported mode with <strong>edge mode</strong>.</p>
-    <p>For more information, <a href="http://stackoverflow.com/questions/6771258/whats-the-difference-if-meta-http-equiv-x-ua-compatible-content-ie-edge-e">read this awesome Stack Overflow article</a>.</p>
+    <h3>Режим совместимости Internet Explorer</h3>
+    <p>IE поддерживает использование специального <code>&lt;meta&gt;</code>-тега, который указывает в режиме совместимости с какой версией IE следует отрендерить страницу. Если обстоятельства не требуют какой-то специальной версии IE, то самым правильным будет заставить браузер использовать режим самой последней версии (<strong>edge mode</strong>).</p>
+    <p>Для получения дополнительной информации следует познакомиться со <a href="http://stackoverflow.com/questions/6771258/whats-the-difference-if-meta-http-equiv-x-ua-compatible-content-ie-edge-e">статьей на Stack Overflow</a>.</p>
   </div>
   <div class="col">
     {% highlight html %}{% include html/ie-compatibility-mode.html %}{% endhighlight %}
@@ -116,8 +115,8 @@ layout: default
 
 <div class="section" id="html-encoding">
   <div class="col">
-    <h3>Character encoding</h3>
-    <p>Quickly and easily ensure proper rendering of your content by declaring an explicit character encoding. When doing so, you may avoid using character entities in your HTML, provided their encoding matches that of the document (generally UTF-8).</p>
+    <h3>Кодировка символов</h3>
+    <p>Явно объявив кодировку символов, вы быстро и легко обеспечите правильное отображение вашего контента. При этом, вы сможете избежать использования <a href="http://www.w3schools.com/html/html_entities.asp">символьных сущностей</a> в вашем HTML-коде, при условии, что их кодировка совпадает с кодировкой документа (как правило, UTF-8).</p>
   </div>
   <div class="col">
     {% highlight html %}{% include html/encoding.html %}{% endhighlight %}
@@ -126,13 +125,13 @@ layout: default
 
 <div class="section" id="html-style-script">
   <div class="col">
-    <h3>CSS and JavaScript includes</h3>
-    <p>Per HTML5 spec, typically there is no need to specify a <code>type</code> when including CSS and JavaScript files as <code>text/css</code> and <code>text/javascript</code> are their respective defaults.</p>
-    <h4>HTML5 spec links</h4>
+    <h3>Подключение CSS и JavaScript</h3>
+    <p>Согласно спецификации HTML5, при подключении CSS и JavaScript файлов не требуется указание атрибута <code>type</code>, так как <code>text/css</code> и <code>text/javascript</code> являются значениями по умолчанию.</p>
+    <h4>Ссылки на спецификацию HTML5:</h4>
     <ul>
-      <li><a href="http://www.w3.org/TR/2011/WD-html5-20110525/semantics.html#the-link-element">Using link</a></li>
-      <li><a href="http://www.w3.org/TR/2011/WD-html5-20110525/semantics.html#the-style-element">Using style</a></li>
-      <li><a href="http://www.w3.org/TR/2011/WD-html5-20110525/scripting-1.html#the-script-element">Using script</a></li>
+      <li><a href="http://www.w3.org/TR/2011/WD-html5-20110525/semantics.html#the-link-element">Использование тега link</a></li>
+      <li><a href="http://www.w3.org/TR/2011/WD-html5-20110525/semantics.html#the-style-element">Использование тега style</a></li>
+      <li><a href="http://www.w3.org/TR/2011/WD-html5-20110525/scripting-1.html#the-script-element">Использование тега script</a></li>
     </ul>
   </div>
   <div class="col">
@@ -142,24 +141,24 @@ layout: default
 
 <div class="section" id="html-practicality">
   <div class="col">
-    <h3>Practicality over purity</h3>
-    <p>Strive to maintain HTML standards and semantics, but not at the expense of practicality. Use the least amount of markup with the fewest intricacies whenever possible.</p>
+    <h3>Практичность важнее чистоты</h3>
+    <p>Старайтесь соблюдать стандарты HTML и семантику, но не за счет практичности. Используйте меньшее количество разметки с наименьшим числом тонкостей, когда это возможно.</p>
   </div>
 </div>
 
 <div class="section" id="html-attribute-order">
   <div class="col">
-    <h3>Attribute order</h3>
-    <p>HTML attributes should come in this particular order for easier reading of code.</p>
+    <h3>Порядок атрибутов</h3>
+    <p>Для удобства чтения HTML-атрибуты должны быть указаны именно в этом порядке:</p>
     <ul>
       <li><code>class</code></li>
       <li><code>id</code>, <code>name</code></li>
       <li><code>data-*</code></li>
-      <li><code>src</code>, <code>for</code>, <code>type</code>, <code>href</code>, <code>value</code></li>
+      <li><code>src</code>, <code>for</code>, <code>type</code>, <code>href</code></li>
       <li><code>title</code>, <code>alt</code></li>
-      <li><code>role</code>, <code>aria-*</code></li>
+      <li><code>aria-*</code>, <code>role</code></li>
     </ul>
-    <p>Classes make for great reusable components, so they come first. Ids are more specific and should be used sparingly (e.g., for in-page bookmarks), so they come second.</p>
+    <p>Классы создают для многократно используемых компонентов верстки, поэтому они идут первыми. Идентификаторы более специфичны и должны использоваться умеренно (например, для закладок на странице), поэтому они следуют вторыми.</p>
   </div>
   <div class="col">
     {% highlight html %}{% include html/attribute-order.html %}{% endhighlight %}
@@ -168,17 +167,17 @@ layout: default
 
 <div class="section" id="html-boolean-attributes">
   <div class="col">
-    <h3>Boolean attributes</h3>
-    <p>A boolean attribute is one that needs no declared value. XHTML required you to declare a value, but HTML5 has no such requirement.</p>
-    <p>For further reading, consult the <a href="http://www.whatwg.org/specs/web-apps/current-work/multipage/common-microsyntaxes.html#boolean-attributes">WhatWG section on boolean attributes</a>:</p>
+    <h3>Логические атрибуты</h3>
+    <p>Логические атрибуты одни из тех, которые не требуют объявленного значения. XHTML требует от вас задать значение, но в HTML5 нет такого требования.</p>
+    <p>За подробной информацией обратимся к <a href="http://www.whatwg.org/specs/web-apps/current-work/multipage/common-microsyntaxes.html#boolean-attributes">разделу о логических атрибутах на WhatWG</a>:</p>
     <blockquote>
-      <p>The presence of a boolean attribute on an element represents the true value, and the absence of the attribute represents the false value.</p>
+      <p>Наличие логического атрибута у элемента говорит об истинном его значении, а отсутствие атрибута &mdash; о ложном.</p>
     </blockquote>
-    <p>If you <em>must</em> include the attribute's value, and <strong>you don't need to</strong>, follow this WhatWG guideline:</p>
+    <p>Если вы <em>должны</em> указать значение атрибута, но <strong>вам это не нужно</strong>, следуйте этой рекомендации от WhatWG:</p>
     <blockquote>
-      <p>If the attribute is present, its value must either be the empty string or [...] the attribute's canonical name, with no leading or trailing whitespace.</p>
+      <p>Если атрибут присутствует, его значение должно быть либо пустой строкой или [...] каноническим именем атрибута без начальных или конечных пробелов.</p>
     </blockquote>
-    <p><strong>In short, don't add a value.</strong></p>
+    <p><strong>Если коротко, то не указывайте значение логическому атрибуту.</strong></p>
   </div>
   <div class="col">
     {% highlight html %}{% include html/boolean-attributes.html %}{% endhighlight %}
@@ -187,8 +186,8 @@ layout: default
 
 <div class="section" id="html-reducing-markup">
   <div class="col">
-    <h3>Reducing markup</h3>
-    <p>Whenever possible, avoid superfluous parent elements when writing HTML. Many times this requires iteration and refactoring, but produces less HTML. Take the following example:</p>
+    <h3>Сокращение разметки</h3>
+    <p>Всякий раз, когда это возможно, избегайте лишних родительских элементов. Во многих случаях это требует повторения и рефакторинга, но позволяет создать меньшее количество разметки. Посмотрите на следующий пример:</p>
   </div>
   <div class="col">
     {% highlight html %}{% include html/reducing-markup.html %}{% endhighlight %}
@@ -197,8 +196,8 @@ layout: default
 
 <div class="section" id="html-javascript">
   <div class="col">
-    <h3>JavaScript generated markup</h3>
-    <p>Writing markup in a JavaScript file makes the content harder to find, harder to edit, and less performant. Avoid it whenever possible.</p>
+    <h3>Разметка, генерируемая с помощью JavaScript</h3>
+    <p>Создание разметки с помощью JavaScript делает ее менее производительной, сложной для поиска и редактирования. По возможности избегайте этого.</p>
   </div>
 </div>
 
@@ -210,24 +209,24 @@ layout: default
 
 <div class="section" id="css-syntax">
   <div class="col">
-    <h3>Syntax</h3>
+    <h3>Синтаксис</h3>
     <ul>
-      <li>Use soft tabs with two spaces—they're the only way to guarantee code renders the same in any environment.</li>
-      <li>When grouping selectors, keep individual selectors to a single line.</li>
-      <li>Include one space before the opening brace of declaration blocks for legibility.</li>
-      <li>Place closing braces of declaration blocks on a new line.</li>
-      <li>Include one space after <code>:</code> for each declaration.</li>
-      <li>Each declaration should appear on its own line for more accurate error reporting.</li>
-      <li>End all declarations with a semi-colon. The last declaration's is optional, but your code is more error prone without it.</li>
-      <li>Comma-separated property values should include a space after each comma (e.g., <code>box-shadow</code>).</li>
-      <li>Don't include spaces after commas <em>within</em> <code>rgb()</code>, <code>rgba()</code>, <code>hsl()</code>, <code>hsla()</code>, or <code>rect()</code> values. This helps differentiate multiple color values (comma, no space) from multiple property values (comma with space).</li>
-      <li>Don't prefix property values or color parameters with a leading zero (e.g., <code>.5</code> instead of <code>0.5</code> and <code>-.5px</code> instead of <code>-0.5px</code>).</li>
-      <li>Lowercase all hex values, e.g., <code>#fff</code>. Lowercase letters are much easier to discern when scanning a document as they tend to have more unique shapes.</li>
-      <li>Use shorthand hex values where available, e.g., <code>#fff</code> instead of <code>#ffffff</code>.</li>
-      <li>Quote attribute values in selectors, e.g., <code>input[type="text"]</code>. <a href="http://mathiasbynens.be/notes/unquoted-attribute-values#css">They’re only optional in some cases</a>, and it’s a good practice for consistency.</li>
-      <li>Avoid specifying units for zero values, e.g., <code>margin: 0;</code> instead of <code>margin: 0px;</code>.</li>
+      <li>Используйте мягкие отступы с двумя пробелами &mdash; это единственный способ гарантировать, что ваш код будет везде одинаково выглядеть.</li>
+      <li>При группировке селекторов помещайте каждый селектор на отдельную строку.</li>
+      <li>Для лучшей читаемости оставляйте один пробел перед открывающейся фигурной скобкой блока объявлений.</li>
+      <li>Помещайте закрывающуюся фигурную скобку блока объявлений на новой строке.</li>
+      <li>Оставляйте один пробел после <code>:</code> для каждого объявления.</li>
+      <li>Каждое объявление должно находится на отдельной строке для более точного сообщения об ошибках.</li>
+      <li>Завершайте все объявления точкой с запятой. Для последнего объявления в блоке это не является обязательным, но в противном случае ваш код будет более подвержен ошибкам.</li>
+      <li>Для свойств, значения которых разделены запятыми, следует оставлять по одному пробелу после каждой запятой (например, <code>box-shadow</code>).</li>
+      <li>Не оставляйте пробелов после запятых <em>внтури</em> значений <code>rgb()</code>, <code>rgba()</code>, <code>hsl()</code>, <code>hsla()</code>, или <code>rect()</code>. Это помогает различать различные цветовые значения (запятая без пробела) от нескольких значений одного свойства (запятая с пробелом).</li>
+      <li>Не добавляйте начальный ноль для значений (например, <code>.5</code> вместо <code>0.5</code>).</li>
+      <li>Все 16-ичные значения записывайте строчными буквами (в нижнем регистре), например, <code>#fff</code>. Строчные буквы гораздо легче различить при просмотре файла, поскольку они, как правило, имеют больше уникальных форм.</li>
+      <li>Используйте короткие 16-ичные значения везде, где это возможно, например, <code>#fff</code> вместо <code>#ffffff</code>.</li>
+      <li>Всегда берите в кавычки значения атрибутов внутри селектора, например, <code>input[type="text"]</code>. <a href="http://mathiasbynens.be/notes/unquoted-attribute-values#css">В некоторых случаях это делать необязательно</a>, но это является хорошей практикой для поддержки согласованности.</li>
+      <li>Опускайте единицы измерения при нулевом значении, например, <code>margin: 0;</code> вместо <code>margin: 0px;</code>.</li>
     </ul>
-    <p>Questions on the terms used here? See the <a href="http://en.wikipedia.org/wiki/Cascading_Style_Sheets#Syntax">syntax section of the Cascading Style Sheets article</a> on Wikipedia.</p>
+    <p>Есть вопросы по перечисленным соглашениям? Ознакомьтесь с <a href="http://en.wikipedia.org/wiki/Cascading_Style_Sheets#Syntax">разделом о синтаксисе статьи о каскадных таблицах стилей</a> на Википедии.</p>
   </div>
   <div class="col">
     {% highlight css %}{% include css/syntax.css %}{% endhighlight %}
@@ -236,17 +235,17 @@ layout: default
 
 <div class="section" id="css-declaration-order">
   <div class="col">
-    <h3>Declaration order</h3>
-    <p>Related property declarations should be grouped together following the order:</p>
+    <h3>Порядок объявления</h3>
+    <p>Объявления логически связанных свойств должны быть сгруппированы в следующем порядке:</p>
     <ol>
-      <li>Positioning</li>
-      <li>Box model</li>
-      <li>Typographic</li>
-      <li>Visual</li>
+      <li>Позиционирование</li>
+      <li>Блочная модель</li>
+      <li>Типографика</li>
+      <li>Отображение</li>
     </ol>
-    <p>Positioning comes first because it can remove an element from the normal flow of the document and override box model related styles. The box model comes next as it dictates a component's dimensions and placement.</p>
-    <p>Everything else takes place <em>inside</em> the component or without impacting the previous two sections, and thus they come last.</p>
-    <p>For a complete list of properties and their order, please see <a href="http://twitter.github.com/recess">Recess</a>.</p>
+    <p>Позиционирование следует первым потому, что оно может удалить элемент из нормального потока документа и переопределить блочную модель связанных стилей. Блочная модель идет следующей, так как она диктует размеры и расположение компонента.</p>
+    <p>Все остальные объявления, выполняющиеся <em>внутри</em> компонента или не оказывающие влияния на предыдущие два раздела, следуют в последнюю очередь.</p>
+    <p>Для ознакомления с полным списком свойств и их порядком обратитесь к <a href="http://twitter.github.com/recess">Recess</a>.</p>
   </div>
   <div class="col">
     {% highlight css %}{% include css/declaration-order.css %}{% endhighlight %}
@@ -255,14 +254,14 @@ layout: default
 
 <div class="section" id="css-import">
   <div class="col">
-    <h3>Don't use <code>@import</code></h3>
-    <p>Compared to <code>&lt;link&gt;</code>s, <code>@import</code> is slower, adds extra page requests, and can cause other unforeseen problems. Avoid them and instead opt for an alternate approach:</p>
+    <h3>Не используйте <code>@import</code></h3>
+    <p>По сравнению с тегом <code>&lt;link&gt;</code> правило <code>@import</code> медленнее, создает дополнительные запросы и может вызвать иные непредвиденные проблемы. Избегайте это правило и используйте вместо него один из альтернативных подходов:</p>
     <ul>
-      <li>Use multiple <code>&lt;link&gt;</code> elements</li>
-      <li>Compile your CSS with a preprocessor like Sass or Less into a single file</li>
-      <li>Concatenate your CSS files with features provided in Rails, Jekyll, and other environments</li>
+      <li>Используйте несколько тегов <code>&lt;link&gt;</code></li>
+      <li>Компилируйте ваш CSS-код в один файл с помощью препроцессоров, например, Sass или Less</li>
+      <li>Склеивайте ваши CSS-файлы с помошью инструментов, которые есть в Rails, Jekyll и других окружениях</li>
     </ul>
-    <p>For more information, <a href="http://www.stevesouders.com/blog/2009/04/09/dont-use-import/">read this article by Steve Souders</a>.</p>
+    <p>Для получения дополнительной информации следует познакомиться со <a href="http://www.stevesouders.com/blog/2009/04/09/dont-use-import/">статьей Стива Соудерса</a>.</p>
   </div>
   <div class="col">
     {% highlight html %}{% include css/import.html %}{% endhighlight %}
@@ -271,8 +270,8 @@ layout: default
 
 <div class="section" id="css-media-queries">
   <div class="col">
-    <h3>Media query placement</h3>
-    <p>Place media queries as close to their relevant rule sets whenever possible. Don't bundle them all in a separate stylesheet or at the end of the document. Doing so only makes it easier for folks to miss them in the future. Here's a typical setup.</p>
+    <h3>Место для media query</h3>
+    <p>Помещайте media queries настолько близко к соответствующим наборам правил, насколько это возможно. Не объединяйте их в отдельную таблицу стилей. Не помещайте их в конце файла. В противном случае это приведет к тому, что media queries будут не замечены в будущем. Вот типичная структура:</p>
   </div>
   <div class="col">
     {% highlight css %}{% include css/media-queries.css %}{% endhighlight %}
@@ -281,9 +280,9 @@ layout: default
 
 <div class="section" id="css-prefixed-properties">
   <div class="col">
-    <h3>Prefixed properties</h3>
-    <p>When using vendor prefixed properties, indent each property such that the declaration's value lines up vertically for easy multi-line editing.</p>
-    <p>In Textmate, use <strong>Text &rarr; Edit Each Line in Selection</strong> (&#8963;&#8984;A). In Sublime Text 2, use <strong>Selection &rarr; Add Previous Line</strong> (&#8963;&#8679;&uarr;) and <strong>Selection &rarr;  Add Next Line</strong> (&#8963;&#8679;&darr;).</p>
+    <h3>Свойства с префиксами</h3>
+    <p>Когда вы используете свойства с префиксами вендоров, оставляйте отступы для каждого свойства так, чтобы значения объявлений выстраивались в вертикальную линию. Это упрощает многострочное редактирование.</p>
+    <p>В Textmate используйте <strong>Text &rarr; Edit Each Line in Selection</strong> (&#8963;&#8984;A). В Sublime Text 2, используйте <strong>Selection &rarr; Add Previous Line</strong> (&#8963;&#8679;&uarr;) и <strong>Selection &rarr;  Add Next Line</strong> (&#8963;&#8679;&darr;).</p>
   </div>
   <div class="col">
     {% highlight css %}{% include css/prefixed-properties.css %}{% endhighlight %}
@@ -292,9 +291,9 @@ layout: default
 
 <div class="section" id="css-single-declarations">
   <div class="col">
-    <h3>Single declarations</h3>
-    <p>In instances where a rule set includes <strong>only one declaration</strong>, consider removing line breaks for readability and faster editing. Any rule set with multiple declarations should be split to separate lines.</p>
-    <p>The key factor here is error detection—e.g., a CSS validator stating you have a syntax error on Line 183. With a single declaration, there's no missing it. With multiple declarations, separate lines is a must for your sanity.</p>
+    <h3>Правила с одиночными объявлениями</h3>
+    <p>В случаях, когда набор правил включает в себя <strong>только одно объявление</strong>, рекомендуется удалить переносы строк для удобства чтения и редактирования. Любой набор правил с несколькими объявлениями должен быть разделен на отдельные строки.</p>
+    <p>Ключевым фактором здесь является обнаружение ошибок &mdash; например, валидатор CSS сообщает вам, что в строке 183 есть синтаксическая ошибка. С одиночным объявлением не возникнет сложности с исправлением. В случае с несколькими объявлениями, разделенными на строки, так же проблем не возникнет. Но если несколько объявлений будут записаны в одну строку, то вам будет сложнее понять какое именно объявление вызвало синтаксическую ошибку.</p>
   </div>
   <div class="col">
     {% highlight css %}{% include css/single-declarations.css %}{% endhighlight %}
@@ -303,8 +302,8 @@ layout: default
 
 <div class="section" id="css-shorthand">
   <div class="col">
-    <h3>Shorthand notation</h3>
-    <p>Strive to limit use of shorthand declarations to instances where you must explicitly set all the available values. Common overused shorthand properties include:</p>
+    <h3>Сокращенная запись</h3>
+    <p>Старайтесь ограничить использование сокращенных объявлений в тех случаях, когда необходимо явно задать все доступные значения. Наиболее часто злоупотребляют сокращением следующих свойств:</p>
     <ul>
       <li><code>padding</code></li>
       <li><code>margin</code></li>
@@ -313,8 +312,8 @@ layout: default
       <li><code>border</code></li>
       <li><code>border-radius</code></li>
     </ul>
-    <p>Often times we don't need to set all the values a shorthand property represents. For example, HTML headings only set top and bottom margin, so when necessary, only override those two values. Excessive use of shorthand properties often leads to sloppier code with unnecessary overrides and unintended side effects.</p>
-    <p>The Mozilla Developer Network has a great article on <a href="https://developer.mozilla.org/en-US/docs/Web/CSS/Shorthand_properties">shorthand properties</a> for those unfamiliar with notation and behavior.</p>
+    <p>Часто нам не нужно устанавливать все значения сокращенной записи свойства. Например, HTML заголовки устанавливают только отступы сверху и снизу, таким образом, в случае необходимости нужно переопределить только эти два значения. Чрезмерное использование сокращенной записи свойств часто приводит к грязному коду с ненужными переопределения и непреднамеренными побочными эффектами.</p>
+    <p>На сайте Mozilla Developer Network есть отличная статья о <a href="https://developer.mozilla.org/en-US/docs/Web/CSS/Shorthand_properties">сокращенной записи свойств</a> для тех кто не знаком с такой формой записи.</p>
   </div>
   <div class="col">
     {% highlight css %}{% include css/shorthand.css %}{% endhighlight %}
@@ -323,33 +322,19 @@ layout: default
 
 <div class="section" id="css-nesting">
   <div class="col">
-    <h3>Nesting in Less and Sass</h3>
-    <p>Avoid unnecessary nesting. Just because you can nest, doesn't mean you always should. Consider nesting only if you must scope styles to a parent and if there are multiple elements to be nested.</p>
-    <p>Additional reading:</p>
-    <ul>
-      <li><a href="http://markdotto.com/2015/07/20/css-nesting/">Nesting in Sass and Less</a></li>
-    </ul>
+    <h3>Вложенность в Less и Sass</h3>
+    <p>Избегайте излишнюю вложенность. То, что вы можете ее использовать, не означает, что вы всегда должны это делать. Применяйте вложенность только если вам нужно сократить область видимости стилей до родительского элемента, а также при наличии нескольких элементов, которые должны быть вложены.</p>
   </div>
   <div class="col">
     {% highlight scss %}{% include css/nesting.scss %}{% endhighlight %}
   </div>
 </div>
 
-<div class="section" id="css-operators">
-  <div class="col">
-    <h3>Operators in Less and Sass</h3>
-    <p>For improved readability, wrap all math operations in parentheses with a single space between values, variables, and operators.</p>
-  </div>
-  <div class="col">
-    {% highlight scss %}{% include css/operators.scss %}{% endhighlight %}
-  </div>
-</div>
-
 <div class="section" id="css-comments">
   <div class="col">
-    <h3>Comments</h3>
-    <p>Code is written and maintained by people. Ensure your code is descriptive, well commented, and approachable by others. Great code comments convey context or purpose. Do not simply reiterate a component or class name.</p>
-    <p>Be sure to write in complete sentences for larger comments and succinct phrases for general notes.</p>
+    <h3>Комментарии</h3>
+    <p>Код написан и поддерживается людьми. Убедитесь, что ваш код является описательным, хорошо прокомментирован и доступным (понятным) для других. Хорошие комментарии к коду передают контекст и цель кода, а не просто повторяют название класса или компонента.</p>
+    <p>Обязательно пишите законченные предложения для больших комментариев и короткие фразы для общих замечаний.</p>
   </div>
   <div class="col">
     {% highlight css %}{% include css/comments.css %}{% endhighlight %}
@@ -358,16 +343,16 @@ layout: default
 
 <div class="section" id="css-classes">
   <div class="col">
-    <h3>Class names</h3>
+    <h3>Имена классов</h3>
     <ul>
-      <li>Keep classes lowercase and use dashes (not underscores or camelCase). Dashes serve as natural breaks in related class (e.g., <code>.btn</code> and <code>.btn-danger</code>).</li>
-      <li>Avoid excessive and arbitrary shorthand notation. <code>.btn</code> is useful for <em>button</em>, but <code>.s</code> doesn't mean anything.</li>
-      <li>Keep classes as short and succinct as possible.</li>
-      <li>Use meaningful names; use structural or purposeful names over presentational.</li>
-      <li>Prefix classes based on the closest parent or base class.</li>
-      <li>Use <code>.js-*</code> classes to denote behavior (as opposed to style), but keep these classes out of your CSS.</li>
+      <li>Записывайте имена классов строчными буквами и используйте знаки тире (а не знаки нижнего подчеркивания или camelCase). Знаки тире служат разделителями во взаимосвязанных классах (например, <code>.btn</code> и <code>.btn-danger</code>).</li>
+      <li>Избегайте чрезмерные и произвольные сокращения. <code>.btn</code> подойдет для <em>button</em>, но <code>.s</code> не означает ничего.</li>
+      <li>Придерживайтесь коротких и емких имен классов настолько, насколько это возможно.</li>
+      <li>Используйте осмысленные имена; используйте структурные или целенаправленные имена вместо презентационных.</li>
+      <li>Классы с префиксами должны основываться на ближайшем классе-родителе или на каком то базовом классе.</li>
+      <li>Используйте имена классов с префиксом <code>.js-*</code> для обозначения поведения (в отличие от стиля), но не используйте эти классы в вашем CSS.</li>
     </ul>
-    <p>It's also useful to apply many of these same rules when creating Sass and Less variable names.</p>
+    <p>Также будет полезно использовать многие из приведенных рекомендаций для имен переменных в препроцессорах Sass и Less.</p>
   </div>
   <div class="col">
     {% highlight css %}{% include css/class-names.css %}{% endhighlight %}
@@ -376,14 +361,14 @@ layout: default
 
 <div class="section" id="css-selectors">
   <div class="col">
-    <h3>Selectors</h3>
+    <h3>Селекторы</h3>
     <ul>
-      <li>Use classes over generic element tag for optimum rendering performance.</li>
-      <li>Avoid using several attribute selectors (e.g., <code>[class^="..."]</code>) on commonly occuring components. Browser performance is known to be impacted by these.</li>
-      <li>Keep selectors short and strive to limit the number of elements in each selector to three.</li>
-      <li>Scope classes to the closest parent <strong>only</strong> when necessary (e.g., when not using prefixed classes).</li>
+      <li>Используйте имена классов место имен тегов для оптимальной производительности отображения.</li>
+      <li>Избегайте использования нескольких селекторов по атрибуту (например, <code>[class^="..."]</code>) для часто встречающихся компонентов. Это негативно повлияет на производительность браузера.</li>
+      <li>Используйте короткие селекторы и старайтесь ограничить количество элементов в каждом селекторе до трех.</li>
+      <li>Вкладывайте классы в ближайший родительский класс <strong>только</strong> в случае необходимости (например, когда не используете классы с префиксами).</li>
     </ul>
-    <p>Additional reading:</p>
+    <p>Дополнительно к прочтению:</p>
     <ul>
       <li><a href="http://markdotto.com/2012/02/16/scope-css-classes-with-prefixes/">Scope CSS classes with prefixes</a></li>
       <li><a href="http://markdotto.com/2012/03/02/stop-the-cascade/">Stop the cascade</a></li>
@@ -396,12 +381,12 @@ layout: default
 
 <div class="section" id="css-organization">
   <div class="col">
-    <h3>Organization</h3>
+    <h3>Организация кода</h3>
     <ul>
-      <li>Organize sections of code by component.</li>
-      <li>Develop a consistent commenting hierarchy.</li>
-      <li>Use consistent white space to your advantage when separating sections of code for scanning larger documents.</li>
-      <li>When using multiple CSS files, break them down by component instead of page. Pages can be rearranged and components moved.</li>
+      <li>Организуйте разделы кода согласно вашим компонентам.</li>
+      <li>Разработайте последовательную иерархию для комментариев.</li>
+      <li>Отделяйте разделы кода несколькими пустыми строками. Это упростит просмотр кода в крупных файлах.</li>
+      <li>Когда вы используете множество CSS-файлов, разбивайте их по компонентам, а не по страницам. Страницы могут быть переработаы и компоненты перемещены с одной страницы на другую.</li>
     </ul>
   </div>
   <div class="col">
@@ -411,14 +396,14 @@ layout: default
 
 <div class="section" id="css-editor-prefs">
   <div class="col">
-    <h3>Editor preferences</h3>
-    <p>Set your editor to the following settings to avoid common code inconsistencies and dirty diffs:</p>
+    <h3>Настройки редактора кода</h3>
+    <p>Установите в вашем редакторе следующие настройки, которые помогут избежать распространенных несогласованностей в коде и грязи:</p>
     <ul>
-      <li>Use soft-tabs set to two spaces.</li>
-      <li>Trim trailing white space on save.</li>
-      <li>Set encoding to UTF-8.</li>
-      <li>Add new line at end of files.</li>
+      <li>Использовать мягкие отступы размером в два пробела.</li>
+      <li>Обрезать конечные пробелы при сохранении.</li>
+      <li>Кодировка файлов UTF-8.</li>
+      <li>Добавлять новую строку в конец файлов.</li>
     </ul>
-    <p>Consider documenting and applying these preferences to your project's <code>.editorconfig</code> file. For an example, see <a href="https://github.com/twbs/bootstrap/blob/master/.editorconfig">the one in Bootstrap</a>. Learn more <a href="http://editorconfig.org">about EditorConfig</a>.</p>
+    <p>Подумайте над документированием и применением этих настроек в файле <code>.editorconfig</code> вашего проекта. Для примера, ознакомьтесь с <a href="https://github.com/twbs/bootstrap/blob/master/.editorconfig">файлом настроек для Bootstrap</a>. Узнайте больше <a href="http://editorconfig.org">об EditorConfig</a>.</p>
   </div>
 </div>
